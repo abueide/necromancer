@@ -162,6 +162,7 @@
 -keepclasseswithmembers class * {
     @android.support.annotation.Keep <init>(...);
 }
+-ignorewarnings
 # Keep Android backend
 
 -keep class com.badlogic.gdx.backends.android.** { *; }
@@ -338,6 +339,7 @@
 
 -keepattributes *Annotation*
 
+-ignorewarnings
 # Keep Android backend
 
 -keep class com.badlogic.gdx.backends.android.** { *; }

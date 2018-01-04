@@ -7,18 +7,20 @@ import scala.collection.convert.wrapAll._
 import sbtrobovm.RobovmPlugin.ManagedNatives
 
 val libgdxVersion = "1.9.6"
+val ashleyVersion = "1.7.3"
 
 lazy val sharedSettings: Seq[Def.Setting[_]] = Seq(
   name := "necromancer",
   version := "0.1",
-  scalaVersion := "2.12.2",
+  scalaVersion := "2.11.12",
   assetsDirectory := {
     val r = file("assets")
     IO.createDirectory(r)
     r
   },
   libraryDependencies ++= Seq(
-    "com.badlogicgames.gdx" % "gdx" % libgdxVersion
+    "com.badlogicgames.gdx" % "gdx" % libgdxVersion,
+    "com.badlogicgames.ashley" % "ashley" % ashleyVersion
   ),
   javacOptions ++= Seq(
     "-Xlint",

@@ -1,3 +1,4 @@
+-ignorewarnings
 # Keep Android backend
 
 -keep class com.badlogic.gdx.backends.android.** { *; }
